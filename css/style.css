@@ -165,7 +165,7 @@ h2 {
   
   /* Caption text */
   .text {
-    color: #f2f2f2;
+    color: #363636;
     font-size: 15px;
     padding: 8px 12px;
     position: absolute;
@@ -174,13 +174,55 @@ h2 {
     text-align: center;
   }
 
+  /* Images */
   .project_img {
-    width:100%;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+
+  /* Hover effect on image */
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  /* On hover effects */
+  .mySlides:hover .project_img {
+    opacity: 0.3;
+  }
+
+  .mySlides:hover .middle {
+    opacity: 1;
+  }
+
+  /* Button within hover effect */
+  .box_text {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .project_button {
+    background-color: #000;
   }
   
   /* Number text (1/3 etc) */
   .numbertext {
-    color: #f2f2f2;
+    color: #363636;
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
@@ -212,4 +254,18 @@ h2 {
   @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
+  }
+
+  /* About section */
+  .about {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  .about_text {
+    line-height: 1.5em;
+  }
+
+  .about_img {
+    padding: 1.5em;
   }
