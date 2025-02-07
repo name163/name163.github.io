@@ -1,9 +1,9 @@
 // Slide data (add or remove slides here)
 const slidesData = [
     {
-        image: "images/home/racoon_placeholder.png",
-        caption: "Caption Text",
-        link: "projects.html"
+        image: "images/Projects/atta/atta_cover.jpg",
+        caption: "ATTA Reimagined",
+        link: "atta_project.html"
     },
     {
         image: "images/home/city_placeholder.jpg",
