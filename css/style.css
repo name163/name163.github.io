@@ -264,10 +264,11 @@ h2 {
 
   .about_text {
     line-height: 1.5em;
+    padding-bottom: 0.9em;
   }
 
   .about_img {
-    padding: 1.5em;
+    width: 50%;
   }
 
 
@@ -278,10 +279,24 @@ h2 {
     font-size: 3em;
   }
 
-  .project_text {
-    line-height: 1.5em;
+  .project_subtitle {
+    margin-top: 2em;
+    margin-bottom: 0.9em;
+  }
+
+  .project_wrapper {
     margin-left: 25%;
     margin-right: 25%;
+    margin-bottom: 1em;
+    text-align: left;
+  }
+
+  .project_text {
+    line-height: 1.5em;
+  }
+
+  .project_video {
+    width: 25%;
   }
 
   .project_gallery {

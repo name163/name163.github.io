@@ -7,27 +7,32 @@ const slidesData = [
     },
     {
         image: "images/home/city_placeholder.jpg",
-        caption: "Caption Two",
+        caption: "Design Capstone",
+        link: "projects.html"
+    },
+    {
+        image: "images/Projects/des240/240_cover.png",
+        caption: "DES240",
+        link: "des240.html"
+    },
+    {
+        image: "images/Projects/des243/image.png",
+        caption: "DES243",
+        link: "des243.html"
+    },
+    {
+        image: "images/home/totoro_placeholder.jpg",
+        caption: "COMPSCI230",
         link: "projects.html"
     },
     {
         image: "images/home/totoro_placeholder.jpg",
-        caption: "Caption Three",
+        caption: "COMPSCI235",
         link: "projects.html"
     },
     {
         image: "images/home/totoro_placeholder.jpg",
-        caption: "Caption Three",
-        link: "projects.html"
-    },
-    {
-        image: "images/home/totoro_placeholder.jpg",
-        caption: "Caption Three",
-        link: "projects.html"
-    },
-    {
-        image: "images/home/totoro_placeholder.jpg",
-        caption: "Caption Three",
+        caption: "COMPSCI331",
         link: "projects.html"
     },
 ];
