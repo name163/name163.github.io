@@ -19,8 +19,31 @@ a:hover {
     color: #3b7288
 }
 
-img {
+/* img {
     vertical-align: middle;
+} */
+
+ul {
+  list-style: disc;
+  color: white;
+  margin: 1em;
+}
+
+li {
+  margin-bottom: 1em;
+}
+
+dl {
+  margin-left: 1em;
+}
+
+dt {
+  margin-top: 1em;
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 2em;
 }
 
 /* Navbar Styling */
@@ -297,6 +320,34 @@ h2 {
 
   .project_video {
     width: 25%;
+  }
+
+  /* Wrapper containing Youtube iFrame */
+  .yt_container {
+    position: relative;
+    overflow: hidden;
+    width: 50%;
+    padding-top: 28.125%;
+  }
+
+  .project_yt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .project_list {
+    list-style: disc;
+    color: white;
+    margin: 1em;
+  }
+
+  .project_image {
+    width: 50%;
   }
 
   .project_gallery {
