@@ -6,9 +6,9 @@ const slidesData = [
         link: "atta_project.html"
     },
     {
-        image: "images/home/city_placeholder.jpg",
+        image: "images/Projects/des_capstone/DES301_Content.png",
         caption: "Design Capstone",
-        link: "projects.html"
+        link: "des_capstone.html"
     },
     {
         image: "images/Projects/des240/240_cover.png",
