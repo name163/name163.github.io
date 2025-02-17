@@ -21,19 +21,14 @@ const slidesData = [
         link: "des243.html"
     },
     {
-        image: "images/home/totoro_placeholder.jpg",
-        caption: "COMPSCI230",
-        link: "projects.html"
-    },
-    {
-        image: "images/home/totoro_placeholder.jpg",
+        image: "images/Projects/compsci235/home_page.png",
         caption: "COMPSCI235",
-        link: "projects.html"
+        link: "compsci235.html"
     },
     {
-        image: "images/home/totoro_placeholder.jpg",
+        image: "images/Projects/compsci331/home_page.png",
         caption: "COMPSCI331",
-        link: "projects.html"
+        link: "compsci331.html"
     },
 ];
 
