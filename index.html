@@ -108,23 +108,25 @@
                     </section>
 
                     <section id="contact" class="page">
-                        <form class="css-form">
+                        <form action="https://api.web3forms.com/submit" method="POST" class="css-form">
                             <span class="selector">.contact-form</span> {
+                                <input type="hidden" name="access_key" value="ab18edd4-d92b-4534-a639-ffe5b3004fb9">
+
                                 <br>
                             
                                 <div class="form-line">
                                     &nbsp;&nbsp;<label>name:</label> 
-                                    <input type="text" placeholder="'Enter Name';" autocomplete="off">
+                                    <input type="text" name="name" placeholder="'Enter Name';" autocomplete="off" required>
                                 </div>
                                 <div class="form-line">
                                     &nbsp;&nbsp;<label>email:</label> 
-                                    <input type="email" placeholder="'Enter Email';" autocomplete="off">
+                                    <input type="email" name="email" placeholder="'Enter Email';" autocomplete="off" required>
                                 </div>
                                 <div class="form-line">
                                     &nbsp;&nbsp;<label>message:</label> 
-                                    <textarea rows="3" placeholder="'Write your message here...';"></textarea>
+                                    <textarea rows="3" name="message" placeholder="'Write your message here...';" required></textarea>
                                 </div>
-                                &nbsp;&nbsp;<button type="button">/* Send Message */</button><br>
+                                &nbsp;&nbsp;<button type="submit">/* Send Message */</button><br>
                             }
                         </form>
                     </section>
@@ -140,7 +142,7 @@
                 <span><i class="fas fa-exclamation-triangle"></i> 0</span>
             </div>
             <div class="right">
-                <span id="cursor-pos">Ln 12, Col 45</span>
+                <span id="cursor-pos">Ln 8, Col 25</span>
                 <span>UTF-8</span>
                 <span id="lang-mode">JavaScript</span>
                 <span><i class="far fa-bell"></i></span>
