@@ -3,61 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Saxon Zhou</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Saxon Zhou Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <header>
-        <nav class="navbar">
-            <div class="logo-container">
-                <a href="#" class="logo">MyPortfolio</a>
+
+    <div class="app-container">
+        <aside class="activity-bar">
+            <div class="icon active"><i class="far fa-copy"></i></div> <div class="icon"><i class="fas fa-search"></i></div>
+            <div class="icon"><i class="fas fa-code-branch"></i></div>
+            <div class="icon"><i class="far fa-bug"></i></div>
+            <div class="icon bottom"><i class="fas fa-cog"></i></div>
+        </aside>
+
+        <aside class="sidebar">
+            <div class="sidebar-header">EXPLORER</div>
+            <div class="sidebar-content">
+                <div class="folder-label"><i class="fas fa-chevron-down"></i> Portfolio</div>
+                <ul class="file-list">
+                    <li class="file-item active" data-target="home">
+                        <i class="fab fa-js text-yellow"></i> index.js
+                    </li>
+                    <li class="file-item" data-target="about">
+                        <i class="fab fa-markdown text-blue"></i> about.md
+                    </li>
+                    <li class="file-item" data-target="projects">
+                        <i class="fa-solid fa-code text-orange"></i> projects.html
+                    </li>
+                    <li class="file-item" data-target="contact">
+                        <i class="fab fa-css3-alt text-css"></i> contact.css
+                    </li>
+                </ul>
             </div>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#projects">Projects</a>
-                <a href="#about">About Me</a>
-                <a href="#contact" class="cta-button">Contact</a>
+        </aside>
+
+        <main class="editor-area">
+            <div class="tabs-bar">
+                <div class="tab active" id="tab-label">
+                    <i class="fab fa-js text-yellow"></i> index.js
+                </div>
             </div>
-        </nav>
-    </header>
 
-    <!-- Hero Section with Parallax -->
-    <section id="home" class="parallax">
-        <div class="hero-text">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Feel free to explore my projects below</p>
-        </div>
-    </section>
+            <div class="breadcrumbs">
+                src > components > <span id="breadcrumb-file">index.js</span>
+            </div>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2 class="p_header">Projects</h2>
-        <!-- The slides -->
-        <div class="slideshow-container"></div>
-        <br>
-        <!-- The dots -->
-        <div class="dots-container" style="text-align:center"></div>
-    </section>
+            <div class="code-viewport">
+                <div class="line-numbers">
+                    </div>
+                
+                <div class="content-wrapper">
+                    
+                    <section id="home" class="page active">
+                        <div class="typewriter-container">
+                            <span class="keyword">const</span> <span class="variable">developer</span> = {<br>
+                                &nbsp;&nbsp;<span class="property">name</span>: <span class="string">"Your Name"</span>,<br>
+                                &nbsp;&nbsp;<span class="property">role</span>: <span class="string">"Full Stack Developer"</span>,<br>
+                                &nbsp;&nbsp;<span class="property">skills</span>: [<span class="string">"Web"</span>, <span class="string">"UI/UX"</span>, <span class="string">"Design"</span>],<br>
+                                &nbsp;&nbsp;<span class="property">status</span>: <span class="function">loading</span>()<br>
+                            };
+                            <br><br>
+                            <span class="comment">// <span id="typing-effect"></span><span class="cursor">|</span></span>
+                        </div>
+                    </section>
 
-    <!-- About Me Section -->
-    <section id="about" class="content-section about">
-        <h2>About Me</h2>
-        <p class="about_text">I’m a Computer Science and Design student at the University of Auckland, 
-            fluent in English and Mandarin. <br>    
-            With the strong communication skills developed through several customer-facing roles and some experience in digital marketing, 
-            I’ve gained a solid foundation in teamwork, problem-solving, and adaptability. 
-            I’m also eager to apply more of my academic knowledge and technical skills professionally, 
-            contributing effectively to projects while continuing to grow in my field.</p>
+                    <section id="about" class="page">
+                        <h1># About Me</h1>
+                        <p>I am a passionate developer who loves building digital products.</p>
+                        <br>
+                        <h2>## Tech Stack</h2>
+                        <ul>
+                            - HTML5, CSS3, JavaScript (ES6+)<br>
+                            - React, Node.js, Python<br>
+                            - Git, Docker, AWS
+                        </ul>
+                        <br>
+                        <blockquote>
+                            > "It is what it is"
+                        </blockquote>
+                    </section>
 
-        <img src="images/home/myself.jpg" class="about_img" alt="photo of myself">
-    </section>
+                    <section id="projects" class="page">
+                        <div class="project-grid">
+                            <div class="json-block">
+                                <span class="punctuation">{</span><br>
+                                    &nbsp;&nbsp;<span class="property">"id"</span>: <span class="number">1</span>,<br>
+                                    &nbsp;&nbsp;<span class="property">"name"</span>: <span class="string">"Magic Cups & Fix-It"</span>,<br>
+                                    &nbsp;&nbsp;<span class="property">"stack"</span>: [<span class="string">"JS Phaser"</span>, <span class="string">"TypeScript"</span>, <span class="string">"JSON"</span>],<br>
+                                    <!-- No link yet -->
+                                    &nbsp;&nbsp;<span class="property">"link"</span>: <a href="#" class="string">"view-project"</a><br>
+                                <span class="punctuation">}</span>
+                            </div>
+                            <div class="json-block">
+                                <span class="punctuation">{</span><br>
+                                    &nbsp;&nbsp;<span class="property">"id"</span>: <span class="number">2</span>,<br>
+                                    &nbsp;&nbsp;<span class="property">"name"</span>: <span class="string">"DeepBreath VR"</span>,<br>
+                                    &nbsp;&nbsp;<span class="property">"stack"</span>: [<span class="string">"Unity"</span>, <span class="string">"C#"</span>],<br>
+                                    <!-- No link yet -->
+                                    &nbsp;&nbsp;<span class="property">"link"</span>: <a href="#" class="string">"view-project"</a><br>
+                                <span class="punctuation">}</span>
+                            </div>
+                        </div>
+                    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="content-section">
-        <h2>Contact</h2>
-        <p>Get in touch with me at: <a href="mailto:saxonz17323@gmail.com">saxonz17323@gmail.com</a></p>
-    </section>
-    <script src="js/script.js"></script>
+                    <section id="contact" class="page">
+                        <form class="css-form">
+                            <span class="selector">.contact-form</span> {
+                                <br>
+                            
+                                <div class="form-line">
+                                    &nbsp;&nbsp;<label>name:</label> 
+                                    <input type="text" placeholder="'Enter Name';" autocomplete="off">
+                                </div>
+                                <div class="form-line">
+                                    &nbsp;&nbsp;<label>email:</label> 
+                                    <input type="email" placeholder="'Enter Email';" autocomplete="off">
+                                </div>
+                                <div class="form-line">
+                                    &nbsp;&nbsp;<label>message:</label> 
+                                    <textarea rows="3" placeholder="'Write your message here...';"></textarea>
+                                </div>
+                                &nbsp;&nbsp;<button type="button">/* Send Message */</button><br>
+                            }
+                        </form>
+                    </section>
+
+                </div>
+            </div>
+        </main>
+
+        <footer class="status-bar">
+            <div class="left">
+                <span><i class="fas fa-code-branch"></i> main*</span>
+                <span><i class="far fa-times-circle"></i> 0</span>
+                <span><i class="fas fa-exclamation-triangle"></i> 0</span>
+            </div>
+            <div class="right">
+                <span id="cursor-pos">Ln 12, Col 45</span>
+                <span>UTF-8</span>
+                <span id="lang-mode">JavaScript</span>
+                <span><i class="far fa-bell"></i></span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
