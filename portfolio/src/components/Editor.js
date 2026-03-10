@@ -21,6 +21,32 @@ function Editor({ activeFile, currentFile }) {
         }
     };
 
+    const [lineCount, setLineCount] = useState(0);
+    const contentRef = useRef(null);
+
+    useEffect(() => {
+        const updateLineNumbers = () => {
+            if (contentRef.current) {
+                const height = contentRef.current.getBoundingClientRect().height;
+                const lineHeight = 21;
+                const lines = Math.floor(height/lineHeight) + 5;
+                console.log("lines: ", contentRef.current);
+                setLineCount(lines);
+            }
+        };
+
+        updateLineNumbers();
+
+        const timeout = setTimeout(updateLineNumbers, 100);
+
+        window.addEventListener("resize", updateLineNumbers);
+
+        return () => {
+            window.removeEventListener("resize", updateLineNumbers);
+            clearTimeout(timeout);
+        };
+    }, [activeFile]);
+
     return (
         <main className="editor-area">
             <TabBar currentFile={currentFile} />
@@ -31,13 +57,15 @@ function Editor({ activeFile, currentFile }) {
 
             <div className="code-viewport">
                 <div className="line-numbers">
-                    {[...Array(21)].map((_, i) => (
+                    {[...Array(lineCount)].map((_, i) => (
                         <div key={i}>{i + 1}</div>
                     ))}
                 </div>
 
                 <div className="content-wrapper">
-                    {renderContent()}
+                    <div ref={contentRef} className="measure-height">
+                        {renderContent()}
+                    </div>
                 </div>
             </div>
         </main>
