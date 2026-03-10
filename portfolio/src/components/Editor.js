@@ -29,8 +29,8 @@ function Editor({ activeFile, currentFile }) {
             if (contentRef.current) {
                 const height = contentRef.current.getBoundingClientRect().height;
                 const lineHeight = 21;
-                const lines = Math.floor(height/lineHeight) + 5;
-                console.log("lines: ", contentRef.current);
+                const lines = Math.floor(height/lineHeight) + 2;
+                console.log("lines: ", height);
                 setLineCount(lines);
             }
         };
