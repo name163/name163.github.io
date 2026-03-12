@@ -1,11 +1,18 @@
 import React, { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 function Contact() {
+    const [captchaToken, setCaptchaToken] = useState(null);
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         message: ''
     });
+    
+    const handleCaptchaChange = (token) => {
+        setCaptchaToken(token);
+    };
 
     const handleChange = (e) => {
         setFormData({
@@ -16,6 +23,12 @@ function Contact() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (!captchaToken) {
+            console.log("CAPTCHA not completed");
+            alert("Please complete the CAPTCHA first.");
+            return;
+        }
+
         const API_URL = "https://mns8l774t4.execute-api.ap-southeast-2.amazonaws.com/prod/contact";
         
         const response = await fetch(API_URL, {
@@ -24,7 +37,7 @@ function Contact() {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                name: formData.name, email: formData.email, message: formData.message
+                name: formData.name, email: formData.email, message: formData.message, captchaToken: captchaToken
             })
         });
 
@@ -70,6 +83,12 @@ function Contact() {
                         value={formData.message}
                         onChange={handleChange}></textarea>
                     </div>
+                    
+                    <ReCAPTCHA
+                        sitekey="6LcU3YcsAAAAAAJd_HNAJTryybfyg8n56EIVk7G2"
+                        onChange={handleCaptchaChange}
+                        theme="dark"
+                    />
                     
                     &nbsp;&nbsp;<button type="submit">/* Send Message */</button>
                 </form>
