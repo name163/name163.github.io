@@ -6,7 +6,7 @@ function Projects() {
 
     useEffect(() => {
         // Use your API Gateway Invoke URL here
-        const API_URL = "https://9a972dzn37.execute-api.ap-southeast-6.amazonaws.com/prod/projects";
+        const API_URL = "https://mns8l774t4.execute-api.ap-southeast-2.amazonaws.com/prod/projects";
 
         fetch(API_URL)
             .then(res => res.json())

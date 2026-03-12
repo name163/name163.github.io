@@ -14,11 +14,24 @@ function Contact() {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Form submitted:", formData);
-        alert(`Message sent!\nName: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`);
-        setFormData({ name: '', email: '', message: '' });
+        const API_URL = "https://mns8l774t4.execute-api.ap-southeast-2.amazonaws.com/prod/contact";
+        
+        const response = await fetch(API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                name: formData.name, email: formData.email, message: formData.message
+            })
+        });
+
+        if (response.ok) {
+            console.log("Message sent: ", formData);
+            alert("Message sent successfully!");
+        }
     };
 
     return (
